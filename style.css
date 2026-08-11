@@ -1,0 +1,119 @@
+:root{
+   --primary-color: rgb(15, 101, 127);
+   --secondary-color:rgb(234, 216, 194);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+html, body {
+    height: 100%;
+    width: 100%;
+   
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: rgb(15, 101, 127);
+    color: white;
+}
+nav button{
+    padding: 7px 12px;
+    border: none;
+    border-radius: 5px;
+    background-color: white;
+    color: rgb(15, 101, 127);
+    cursor: pointer;
+}
+main{
+    
+    height: 100%;
+    width: 100%;
+}
+
+
+.add-task-card{
+    display: flex;
+    flex-direction: column;
+    height: 40%;
+    width: 100%;
+   justify-content: center;
+   align-items: center;
+    gap: 5%;
+    background-color: rgb(234, 216, 194);
+    
+}
+/* main h1{
+    font-size: 2rem;
+    color: black;
+} */
+
+#taskInput{
+    height: 20%;
+    width: 90%;
+    
+    padding: 3px;
+    border: 1px solid black;
+    border-radius: 0.5rem;
+}
+#category{
+    height: 20%;
+    width: 90%;
+    
+    padding: 3px;
+    border: 1px solid black;
+    border-radius: 0.5rem;
+}
+#addTask{
+    height: 17%;
+    width: 40%;
+    color: white;
+    background-color: rgb(15, 101, 127);
+    padding: 3px;
+    border: 1px solid black;
+    border-radius: 1rem;
+}
+
+.task-card{
+    display: flex;
+    flex-direction: column;
+    height: 30%;
+    width: 90%;
+   padding: 1.5rem 2rem;
+   margin: 0.5rem auto;
+   background-color: rgb(228, 241, 236);
+    gap: 0.5rem;
+    border-radius: 1rem;
+    color: rgb(8, 8, 8);
+    border: 2.5px solid rgb(163, 130, 130);
+}
+
+.task-list-title{
+    margin-top: 1rem;
+    margin-left: 4rem;
+    font-size: 2rem;
+}
+
+
+.task-item-actions button{
+    height: 35px;
+    width: 80px;
+    border: none;
+    border-radius: 5px;
+    
+    color: rgb(9, 9, 9);
+    cursor: pointer;
+    margin:0.5rem 0.5rem;
+    border: 1px solid rgb(163, 130, 130);
+}
+.task-item-actions button:nth-child(1){
+    background-color: rgb(181, 113, 11);
+}
+.task-item-actions button:nth-child(2){
+    background-color: rgb(255, 0, 0);
+}
