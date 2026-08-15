@@ -126,14 +126,59 @@ main{
     top:50%;
     left:50%;
     transform: translate(-50%, -50%);
-    background-color: aqua;
+    background-color: rgba(0, 0, 0, 0.267);
+   
     padding: 1.5rem;
+    z-index: 1000;
     gap: 1rem;
-    flex-direction: column;
+    /* flex-direction: column; */
+    height: 100%;
+    width: 100%;
 }
 
 .editbuttion {
     display: flex;
-    flex-direction: column;
+   flex-direction: column;
+   height: 50vh;
+   width: 100vw;
     gap: 1rem;
+    margin-top: 10vh;
+    border-radius: 2rem;
+    /* justify-content: center; */
+    align-items: center;
+    padding: 3rem;
+    gap: 2rem;
+    background-color: rgba(77, 83, 4, 0.973);
+}
+.editbutton-title{
+   width: 50vw;
+   height: 2.5rem;
+   border: 2px solid black;
+   border-radius: 1rem;
+   padding-left: 2rem;
+   background-color: var(--secondary-color);
+}
+.edit-category{
+    width: 50vw;
+    height: 2.5rem;
+    border: 2px solid black;
+   border-radius: 1rem;
+   padding-left: 2rem;
+   background-color: var(--secondary-color);
+}
+.editbtn-button :nth-child(1){
+    padding: 0.5rem 2rem;
+    border: 2px solid black;
+   border-radius: 1rem;
+   margin-right: 1.5rem;
+   background-color: var(--primary-color);
+   color: #fff;
+}
+.editbtn-button :nth-child(2){
+    padding: 0.5rem 2rem;
+    border: 2px solid black;
+   border-radius: 1rem;
+   margin-left: 1.5rem;
+   background-color: var(--primary-color);
+   color: #fff;
 }
