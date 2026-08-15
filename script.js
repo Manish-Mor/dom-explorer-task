@@ -70,17 +70,19 @@ let deleteBtn = (index)=>{
 }
 
 let editBtn = (index)=>{
-    // editButtonSection.style.display ="block"
-    // editButtonSection.innerHTML =`<div class="editbuttion">
-    //                 <div class="task-item-title"> <h2>Title :- ${elm.taskTitle1 }</h2></div>
-    //                 <div class="task-item-category"><h2>Category :- ${elm.category1 }</h2></div>
-    //                 <div class="task-item-status"><h2>Status :- ${elm.status1} </h2></div>
-    //                 <div><button>Submit</button></div>
-    //             </div>`
+   let edit = editButtonSection.style.display ="flex";
+//    editButtonSection.style.
+    editButtonSection.innerHTML =`<div class="editbuttion">
+                    <div class="task-item-title"> <h2>Title :- </h2></div>
+                    <div class="task-item-category"><h2>Category :- </h2></div>
+                    <div class="task-item-status"><h2>Status :- </h2></div>
+                    <div><button>Submit</button></div>
+                </div>`
     // make the form which activate when the click on the button and when click on the submit the ui update then , show and hide when click on the edit btn and submit btn 
-    array[index].taskTitle1= taskTitle.value;
-    array[index].category1 = category.value;
-    
+    // array[index].taskTitle1= taskTitle.value;
+    // array[index].category1 = category.value;
+    console.log(edit)
+    ui()
 }
 
 let taskComplete = (index)=>{

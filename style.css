@@ -120,7 +120,20 @@ main{
 .task-item-actions button:nth-child(2){
     background-color: green;
 }
-/* .editbutton{
+.editbutton-section{
     display: none;
-    position:absolute;
-} */
+    position: fixed;
+    top:50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    background-color: aqua;
+    padding: 1.5rem;
+    gap: 1rem;
+    flex-direction: column;
+}
+
+.editbuttion {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
