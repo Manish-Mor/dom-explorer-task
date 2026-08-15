@@ -182,3 +182,33 @@ main{
    background-color: var(--primary-color);
    color: #fff;
 }
+
+.search-section{
+    width: 89vw;
+    height: 25%;
+    margin: 1rem auto;
+    padding: 1rem;
+    gap: 1rem;
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(228, 241, 236);
+    align-items: center;
+    border: 2px solid black;
+    border-radius: 2.5rem;
+    
+
+}
+.search-section input{
+   padding: 0.5rem 5rem;
+   border: 1px solid black;
+   border-radius: 1rem;
+   background-color: #f2c8c8;
+
+}
+.search-section div{
+    display: flex;
+    gap: 15rem;
+   
+   
+    
+}

@@ -6,6 +6,8 @@ const taskList = document.querySelector("#taskList");
 const form = document.querySelector("form");
 const taskLists = document.querySelector(".task-lists");
 const editButtonSection = document.querySelector(".editbutton-section");
+const searchSection = document.querySelector(".search-section");
+
 
 const array = [
   {
@@ -37,13 +39,22 @@ const ui = () => {
             <div class="task-item-status"><h2>Status :- ${elm.status1} </h2></div>
             <div class="task-item-actions"><button  onclick="editBtn(${index})" >Edit</button> <button onclick="taskComplete(${index})"> Complete</button><button onclick="deleteBtn(${index})" class="deletebtn" >Delete</button></div>
         </div>`;
+
+
   });
+  let totalComplete = array.reduce((arr, el)=>{ return el.status1 === "Complete" ? arr+1:arr}, 0)
+     let totalPending = array.reduce((arr, el)=>{ return el.status1 === "Pending" ? arr+1:arr}, 0)      
+searchSection.innerHTML = `<input type="text" placeholder="Search">
+        <div><h2>Complete task :- ${totalComplete }</h2>
+        <h2>Pending task :- ${totalPending} </h2></div>`
 };
 
 ui();
 
+
 form.addEventListener("submit", (e) => {
   e.preventDefault();
+
   let taskTitle1 = taskTitle.value;
   let category1 = category.value;
   let status1 = "Pending";
@@ -52,6 +63,8 @@ form.addEventListener("submit", (e) => {
     category1,
     status1,
   });
+
+
 
   ui();
   console.log("Task added");
@@ -91,7 +104,7 @@ const editBtnSubmit = document.querySelector("#submitbtn-submit");
  let submitBtn = (index)=>{
     const editTitle = document.querySelector(".editbutton-title");
 const editCategory = document.querySelector(".edit-category");
-  if(editTitle ==="" || editCategory ==="") return;
+  if(editTitle ===""     || editCategory ==="") return;
     array[index].taskTitle1 = editTitle.value;
     array[index].category1 = editCategory.value;
     editButtonSection.style.display = "none";
