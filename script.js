@@ -11,12 +11,12 @@ const searchSection = document.querySelector(".search-section");
 
 const array = [
   {
-    taskTitle1: "Homework",
+    taskTitle1: "homework",
     category1: "Study",
     status1: "Pending",
   },
   {
-    taskTitle1: "Gym",
+    taskTitle1: "gym",
     category1: "work",
     status1: "Complete",
   },
@@ -43,10 +43,14 @@ const ui = () => {
 
   });
   let totalComplete = array.reduce((arr, el)=>{ return el.status1 === "Complete" ? arr+1:arr}, 0)
-     let totalPending = array.reduce((arr, el)=>{ return el.status1 === "Pending" ? arr+1:arr}, 0)      
-searchSection.innerHTML = `<input type="text" placeholder="Search">
-        <div><h2>Complete task :- ${totalComplete }</h2>
-        <h2>Pending task :- ${totalPending} </h2></div>`
+     let totalPending = array.reduce((arr, el)=>{ return el.status1 === "Pending" ? arr+1:arr}, 0)  
+     searchSection.innerHTML = `<input type="text" placeholder="Search" id="searchoption">
+     <div><h2>Complete task :- ${totalComplete }</h2>
+     <h2>Pending task :- ${totalPending} </h2></div>`
+
+   
+
+ 
 };
 
 ui();
@@ -55,7 +59,7 @@ ui();
 form.addEventListener("submit", (e) => {
   e.preventDefault();
 
-  let taskTitle1 = taskTitle.value;
+  let taskTitle1 = taskTitle.value.toLowerCase();
   let category1 = category.value;
   let status1 = "Pending";
   array.push({
@@ -67,6 +71,9 @@ form.addEventListener("submit", (e) => {
 
 
   ui();
+
+  
+
   console.log("Task added");
   form.reset();
 });
@@ -77,7 +84,7 @@ let deleteBtn = (index) => {
 };
 
 let editBtn = (index) => {
-  let edit = (editButtonSection.style.display = "flex");
+  let edit = editButtonSection.style.display = "flex";
      let taskname =array[index]
   editButtonSection.innerHTML = `<div class="editbuttion">
                    <input class="editbutton-title"  required placeholder="Title" value="${taskname.taskTitle1}">
@@ -96,7 +103,9 @@ let editBtn = (index) => {
   // make the form which activate when the click on the button and when click on the submit the ui update then , show and hide when click on the edit btn and submit btn
   // array[index].taskTitle1= taskTitle.value;
   // array[index].category1 = category.value;
+ 
   console.log(edit);
+  
   ui();
 };
 
@@ -122,3 +131,22 @@ let taskComplete = (index) => {
   array[index].status1 = "Complete";
   ui();
 };
+//  const searchValue = document.querySelector("#searchoption")
+// let searchopt =addEventListener("input",(e)=>{
+//   const searchTerm = e.target.value.toLowerCase()
+//      let searchoption =   array.filter((user)=>{ user.taskTitle1.toLowerCase().includes(searchTerm)}) 
+//      console.log(searchoption, "hello")
+
+   
+// })
+
+
+const section5 = document.querySelector(".section-5");
+const section5D = document.querySelector(".section-5-div");
+const section5B = document.querySelector(".section-5-btn");
+section5.addEventListener("click",(index)=>{console.log("Grandparent capturing")}, true)
+section5D.addEventListener("click",(index)=>{console.log("Parent capturing")}, true)
+section5B.addEventListener("click",(index)=>{console.log("child capturing")}, true)
+section5B.addEventListener("click",(index)=>{console.log("child bubbling")}, )
+section5D.addEventListener("click",(index)=>{console.log("Parent bubbling")}, )
+section5.addEventListener("click",(index)=>{console.log("Grandparent bubbling")}, )

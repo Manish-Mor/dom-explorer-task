@@ -44,6 +44,38 @@
              <section class="editbutton-section">
                 
              </section>
+
+      
+
+
+             <section class="section5">
+                <h1>Event Propagation Demo</h1>
+                <h4>Open browser console and click the button below to see Event Bubbling and Capturing order.</h4>
+               <div class="section-5">Grandparent
+                 <div class="section-5-div">Parent
+                    <button class="section-5-btn">Child</button>
+                </div>
+               </div>
+             </section>
+
+
+             <section class="rendering">
+                <div class="pipeline">HTML</div>
+                <div class="arrow">↓</div>
+                <div class="pipeline">Parsing</div>
+                <div class="arrow">↓</div>
+                <div class="pipeline">Tokenization</div>
+                <div class="arrow">↓</div>
+                <div class="pipeline">DOM Tree</div>
+                <div class="arrow">↓</div>
+                <div class="pipeline">CSS</div>
+                <div class="arrow">↓</div>
+                <div class="pipeline">CSSOM Tree</div>
+                <div class="arrow">↓</div>
+                <div class="pipeline">DOM Tree + CSSOM Tree</div>
+                <div class="arrow">↓</div>
+                <div class="pipeline">Render Tree</div>
+             </section>
     </main>
     <script src="script.js"></script>
 </body>
