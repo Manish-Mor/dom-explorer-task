@@ -7,6 +7,15 @@ const form = document.querySelector("form");
 const taskLists = document.querySelector(".task-lists");
 const editButtonSection = document.querySelector(".editbutton-section");
 const searchSection = document.querySelector(".search-section");
+const darkModebtn = document.querySelector("#Dark-light-mode");
+const addTaskcard = document.querySelector(".add-task-card")
+
+darkModebtn.addEventListener("click",()=>{
+  document.body.classList.toggle("dark-mode");
+  
+})
+
+
 
 const array = [
   {
@@ -27,7 +36,7 @@ const array = [
 ];
 
 
-console.log("Attribute:", taskTitle.getAttribute("placeholder")); // Gets HTML attribute
+console.log("Attribute:", taskTitle.getAttribute("placeholder"));
 console.log("Property:", taskTitle.placeholder);
 
 

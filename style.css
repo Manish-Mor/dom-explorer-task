@@ -1,6 +1,12 @@
 :root{
-   --primary-color: rgb(15, 101, 127);
-   --secondary-color:rgb(234, 216, 194);
+   --surface-color:#FFFFFF;
+   --text:#1F2937;
+   --prime:#2563EB;
+}
+:root{
+    --dark-surface-color:#374860;
+    --dark-text:#F9FAFB;
+    --dark-prime:#3B82F6;
 }
 
 * {
@@ -13,22 +19,37 @@ html, body {
     width: 100%;
    
 }
+body{
+    background-color: #F3F4F6;
+    color: var(--text);
+}
+body.dark-mode{
+    background-color:#111827 ;
+    color: var(--dark-text);
+}
 
 nav{
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 10px;
-    background-color: rgb(15, 101, 127);
-    color: white;
+    background-color: var(--surface-color);
+    border: 1px solid black;
+    
+}
+.dark-mode nav{
+    background-color: var(--dark-surface-color);
 }
 nav button{
     padding: 7px 12px;
     border: none;
     border-radius: 5px;
-    background-color: white;
-    color: rgb(15, 101, 127);
+    background-color: var(--prime);
+    
     cursor: pointer;
+}
+.dark-mode nav button{
+    background-color: var(--dark-prime);
 }
 main{
     
@@ -44,9 +65,15 @@ main{
     width: 100%;
    justify-content: center;
    align-items: center;
+   margin-top: 2rem;
     gap: 5%;
-    background-color: rgb(234, 216, 194);
+    background-color: var(--surface-color);
+    border: 1px solid black;
+    border-radius: 15rem;
     
+}
+.dark-mode .add-task-card{
+    background-color: var(--dark-surface-color);
 }
 /* main h1{
     font-size: 2rem;
@@ -73,11 +100,12 @@ main{
     height: 17%;
     width: 40%;
     color: white;
-    background-color: rgb(15, 101, 127);
+    background-color: var(--prime);
     padding: 3px;
     border: 1px solid black;
     border-radius: 1rem;
 }
+
 
 .task-card{
     display: flex;
@@ -86,11 +114,14 @@ main{
     width: 90%;
    padding: 1.5rem 2rem;
    margin: 0.5rem auto;
-   background-color: rgb(228, 241, 236);
+   background-color: var(--surface-color);
     gap: 0.5rem;
     border-radius: 1rem;
-    color: rgb(8, 8, 8);
-    border: 2.5px solid rgb(163, 130, 130);
+    /* color: rgb(8, 8, 8); */
+    border: 1px solid rgb(163, 130, 130);
+}
+.dark-mode .task-card{
+    background-color: var(--dark-surface-color);
 }
 
 .task-list-title{
@@ -106,7 +137,7 @@ main{
     border: none;
     border-radius: 5px;
     
-    color: rgb(9, 9, 9);
+    /* color: rgb(9, 9, 9); */
     cursor: pointer;
     margin:0.5rem 0.5rem;
     border: 1px solid rgb(163, 130, 130);
@@ -126,14 +157,19 @@ main{
     top:50%;
     left:50%;
     transform: translate(-50%, -50%);
-    background-color: rgba(0, 0, 0, 0.267);
-   
+    /* background-color: var(--sur); */
+   /* color: black; */
     padding: 1.5rem;
     z-index: 1000;
     gap: 1rem;
     /* flex-direction: column; */
     height: 100%;
     width: 100%;
+}
+.dark-mode .editbuttion{
+     background-color: var(--dark-surface-color);
+     color: white;
+     border: 1px solid white;
 }
 
 .editbuttion {
@@ -143,12 +179,14 @@ main{
    width: 100vw;
     gap: 1rem;
     margin-top: 10vh;
-    border-radius: 2rem;
+    border-radius: 1rem;
     /* justify-content: center; */
     align-items: center;
     padding: 3rem;
     gap: 2rem;
-    background-color: rgba(77, 83, 4, 0.973);
+    background-color:var(--surface-color);
+    border: 1px solid black;
+    /* color: var(--text); */
 }
 .editbutton-title{
    width: 50vw;
@@ -156,7 +194,7 @@ main{
    border: 2px solid black;
    border-radius: 1rem;
    padding-left: 2rem;
-   background-color: var(--secondary-color);
+   /* background-color: var(--dark-secondary); */
 }
 .edit-category{
     width: 50vw;
@@ -164,23 +202,24 @@ main{
     border: 2px solid black;
    border-radius: 1rem;
    padding-left: 2rem;
-   background-color: var(--secondary-color);
+   /* background-color: var(--secondary-color); */
 }
 .editbtn-button :nth-child(1){
     padding: 0.5rem 2rem;
     border: 2px solid black;
    border-radius: 1rem;
    margin-right: 1.5rem;
-   background-color: var(--primary-color);
-   color: #fff;
+   /* background-color: var(--primary-color); */
+   /* color: #fff; */
 }
+
 .editbtn-button :nth-child(2){
     padding: 0.5rem 2rem;
     border: 2px solid black;
    border-radius: 1rem;
    margin-left: 1.5rem;
-   background-color: var(--primary-color);
-   color: #fff;
+   /* background-color: var(--primary-color); */
+   /* color: #fff; */
 }
 
 .search-section{
@@ -191,18 +230,21 @@ main{
     gap: 1rem;
     display: flex;
     flex-direction: column;
-    background-color: rgb(228, 241, 236);
+    background-color:var(--surface-color);
     align-items: center;
-    border: 2px solid black;
+    border: 1px solid black;
     border-radius: 2.5rem;
     
 
+}
+.dark-mode .search-section{
+     background-color: var(--dark-surface-color);
 }
 .search-section input{
    padding: 0.5rem 5rem;
    border: 1px solid black;
    border-radius: 1rem;
-   background-color: #f2c8c8;
+   background-color: var(--dark-text);
 
 }
 .search-section div{
@@ -221,7 +263,7 @@ main{
    display: flex;
    flex-direction: column;
    gap: 0.5rem;
-    background-color: rgb(237, 245, 242);
+    background-color: var(--surface-color);
     
     border: 1px solid rgba(75, 71, 71, 0.384);
     border-radius: 0.5rem;
@@ -231,9 +273,12 @@ main{
     padding: 0.6rem;
     margin-left: 2rem;
     background-color: #07287e;
-    color: #fff;
+    /* color: #fff; */
     border: 2px solid rgb(251, 249, 247);
     
+}
+.dark-mode .section5{
+     background-color: var(--dark-surface-color);
 }
 .section-5-div{
     padding: 0.6rem;
@@ -262,11 +307,14 @@ main{
    flex-direction: column;
    gap: 0.5rem;
    align-items: center;
-    background-color: rgb(237, 245, 242);
+    background-color: var(--surface-color);
     
     border: 1px solid rgba(75, 71, 71, 0.384);
     border-radius: 0.5rem;
 
+}
+.dark-mode .rendering{
+     background-color: var(--dark-surface-color);
 }
 
 .pipeline{
