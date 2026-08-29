@@ -11,7 +11,7 @@ const darkModebtn = document.querySelector("#Dark-light-mode");
 const addTaskcard = document.querySelector(".add-task-card")
 
 darkModebtn.addEventListener("click",()=>{
-  document.body.classList.toggle("dark-mode");
+  document.body.classList.toggle("dark-mode"); 
   
 })
 
